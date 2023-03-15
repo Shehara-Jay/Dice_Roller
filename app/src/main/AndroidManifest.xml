@@ -12,6 +12,15 @@
         android:theme="@style/Theme.DiceRoller"
         tools:targetApi="31">
         <activity
+            android:name=".popup"
+            android:exported="false" />
+        <activity
+            android:name=".About"
+            android:exported="false" />
+        <activity
+            android:name=".options"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
