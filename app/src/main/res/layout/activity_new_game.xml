@@ -7,6 +7,18 @@
     android:background="@drawable/gamebackground"
     tools:context=".NewGame">
 
+    <TextView
+        android:id="@+id/userRoundId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginTop="9dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundId" />
+
     <Button
         android:id="@+id/throwId"
         android:layout_width="250dp"
@@ -15,6 +27,7 @@
         android:layout_marginTop="60dp"
         android:backgroundTint="#040A5B"
         android:text="Throw"
+        app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dice5Id" />
 
@@ -26,6 +39,7 @@
         android:layout_marginTop="22dp"
         android:backgroundTint="#040A5B"
         android:text="Score"
+        app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/throwId" />
 
@@ -34,13 +48,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="72dp"
         android:text="Computer"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView
         android:id="@+id/dice1Id"
@@ -68,6 +82,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="155dp"
         android:layout_marginTop="39dp"
+        android:clickable="false"
         app:layout_constraintStart_toEndOf="@+id/dice1Id"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/dice1" />
@@ -88,6 +103,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="155dp"
         android:layout_marginTop="9dp"
+        android:clickable="false"
         app:layout_constraintStart_toEndOf="@+id/dice5Id"
         app:layout_constraintTop_toBottomOf="@+id/dice9Id"
         app:srcCompat="@drawable/dice5" />
@@ -98,6 +114,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="155dp"
         android:layout_marginTop="9dp"
+        android:clickable="false"
         app:layout_constraintStart_toEndOf="@+id/dice3Id"
         app:layout_constraintTop_toBottomOf="@+id/dice7Id"
         app:srcCompat="@drawable/dice3" />
@@ -108,6 +125,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="155dp"
         android:layout_marginTop="9dp"
+        android:clickable="false"
         app:layout_constraintStart_toEndOf="@+id/dice4Id"
         app:layout_constraintTop_toBottomOf="@+id/dice8Id"
         app:srcCompat="@drawable/dice4" />
@@ -118,6 +136,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="155dp"
         android:layout_marginTop="9dp"
+        android:clickable="false"
         app:layout_constraintStart_toEndOf="@+id/dice2Id"
         app:layout_constraintTop_toBottomOf="@+id/dice6Id"
         app:srcCompat="@drawable/dice2" />
@@ -146,39 +165,76 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="16dp"
         android:text=" User"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/comScoreId" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/roundId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="36dp"
         android:text="Round"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="36dp"
         android:text="Score"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/roundId"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:text="Target"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comScoreId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/userScoreId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/comScoreId"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

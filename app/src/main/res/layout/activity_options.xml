@@ -16,6 +16,7 @@
         android:backgroundTint="#040A5B"
         android:text="About"
         android:textColor="@color/white"
+        app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newgameId" />
 
@@ -28,6 +29,7 @@
         android:backgroundTint="#040A5B"
         android:text="New Game"
         android:textColor="@color/white"
+        app:cornerRadius="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
