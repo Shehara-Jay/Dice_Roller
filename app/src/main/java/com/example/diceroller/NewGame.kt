@@ -17,15 +17,19 @@ class NewGame : AppCompatActivity() {
     var userList = mutableListOf<Int>()
     var computerScore = 0
     var userScore = 0
-    var roundNum = 0
+    var roundNum = 1
     var userRoundDisplay : TextView ?= null
-
-
+    var targetScore = 101
 
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_new_game)
+        val userTarget:TextView = findViewById(R.id.targetDisplayId)
+
+        targetScore = Integer.parseInt(intent.getStringExtra("myVariableKey"))
+        userTarget.text = targetScore.toString()
 
 
 
@@ -46,6 +50,9 @@ class NewGame : AppCompatActivity() {
         userRoundDisplay = findViewById(R.id.userRoundId)
 
 
+
+
+
         val computerDice = mutableListOf<ImageView>(dice1,dice2,dice3,dice4,dice5)
         val userDiceList = mutableListOf<ImageView>(dice6,dice7,dice8,dice9,dice10)
 
@@ -60,10 +67,12 @@ class NewGame : AppCompatActivity() {
             if (throwbutton.text=="Throw"){
                 throwbutton.setText("Rethrow1")
                 scorebutton.isEnabled = true
+                userRoundDisplay?.text =roundNum.toString()
                 userList = ranList()
                 for (i in 0..4){
                     userDiceList[i].isClickable = true
                 }
+
             }else if (throwbutton.text=="Rethrow1"){
                 throwbutton.setText("Rethrow2")
                 for (i in 0 until 5){
@@ -87,11 +96,11 @@ class NewGame : AppCompatActivity() {
                         userList[i]=ranNum
 
 
-
                     }
                 }
                 scorebutton.isEnabled = false
                 updateRound()
+                winLoose()
 
             }
             stopImageList = mutableListOf<Boolean>(false,false,false,false,false)
@@ -120,7 +129,31 @@ class NewGame : AppCompatActivity() {
                 userDiceList[i].setBackgroundColor(Color.TRANSPARENT)
 
             }
+            for (i in 0..4){
+                userDiceList[i].isClickable = false
+            }
             updateRound()
+
+            if (userScore>=targetScore && userScore>computerScore){
+                val dialog = Dialog(this)
+                dialog.setContentView(R.layout.activity_win_loose_popup)
+                dialog.show()
+
+            }
+
+            else if(computerScore>=targetScore && userScore<computerScore){
+                val dialog = Dialog(this)
+                dialog.setContentView(R.layout.activity_win_loose_popup)
+                val resultText = dialog.findViewById<TextView>(R.id.winLooseId)
+                resultText.text = "lost"
+                resultText.setTextColor(Color.RED)
+                dialog.show()
+
+            }
+            winLoose()
+
+
+
 
         }
 
@@ -182,6 +215,39 @@ class NewGame : AppCompatActivity() {
         userRoundDisplay?.text=roundNum.toString()
 
         }
+    fun winLoose(){
+        if (userScore>=targetScore && userScore>computerScore){
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.activity_win_loose_popup)
+            dialog.setCancelable(true)
+            dialog.setCanceledOnTouchOutside(false)
+            dialog.setOnCancelListener {
+                finish()
+            }
+            dialog.show()
+
+        }
+
+        else if(computerScore>=targetScore && userScore<computerScore){
+            val dialog = Dialog(this)
+            dialog.setContentView(R.layout.activity_win_loose_popup)
+            val resultText = dialog.findViewById<TextView>(R.id.winLooseId)
+            resultText.text = "lost"
+            resultText.setTextColor(Color.RED)
+            dialog.setCancelable(true)
+            dialog.setCanceledOnTouchOutside(false)
+            dialog.setOnCancelListener {
+                finish()
+            }
+            dialog.show()
+
+        }
+
+    }
+    fun computerReroll(){
+        val random = Random()
+        val randomBoolean = random.nextBoolean()
+    }
 
     }
 
