@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.widget.Button
 import android.widget.EditText
 
@@ -37,8 +38,17 @@ class options : AppCompatActivity() {
 
                 val intent = Intent(this, NewGame::class.java)
                 intent.putExtra("myVariableKey", targetId.text.toString())
-                startActivity(intent)
-                dialog.dismiss()
+                if (targetId.text.toString().isEmpty()){
+                    val errorMessage = "Please set a target"
+                    targetId.setHint(errorMessage)
+
+                }
+
+                else{
+                    startActivity(intent)
+                    dialog.dismiss()
+                }
+
 
             }
 

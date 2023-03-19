@@ -11,7 +11,7 @@
         android:id="@+id/winLooseId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You win"
+        android:text="You win!"
         android:textColor="#4CAF50"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"

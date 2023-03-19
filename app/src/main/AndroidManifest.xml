@@ -21,9 +21,6 @@
             android:name=".NewGame"
             android:exported="false" />
         <activity
-            android:name=".popup"
-            android:exported="false" />
-        <activity
             android:name=".About"
             android:exported="false" />
         <activity

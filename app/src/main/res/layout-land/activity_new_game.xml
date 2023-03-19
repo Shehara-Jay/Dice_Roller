@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sea2"
+    tools:context=".NewGame">
+
+    <TextView
+        android:id="@+id/targetDisplayId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="392dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/userRoundId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="399dp"
+        tools:layout_editor_absoluteY="64dp"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/throwId"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#040A5B"
+        android:text="Throw"
+        app:cornerRadius="8dp"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <Button
+        android:id="@+id/scoreId"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#040A5B"
+        android:text="Score"
+        app:cornerRadius="8dp"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computer"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <ImageView
+        android:id="@+id/dice1Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/dice1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <ImageView
+        android:id="@+id/dice2Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/dice2"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="177dp" />
+
+    <ImageView
+        android:id="@+id/dice6Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="171dp"
+        android:clickable="false"
+        app:layout_constraintStart_toEndOf="@+id/targetDisplayId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/dice5Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/dice5"
+        tools:layout_editor_absoluteX="771dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageView
+        android:id="@+id/dice10Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:clickable="false"
+        app:srcCompat="@drawable/dice5"
+        tools:layout_editor_absoluteX="240dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <ImageView
+        android:id="@+id/dice8Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:clickable="false"
+        app:srcCompat="@drawable/dice3"
+        tools:layout_editor_absoluteX="638dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageView
+        android:id="@+id/dice9Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:clickable="false"
+        app:srcCompat="@drawable/dice4"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <ImageView
+        android:id="@+id/dice7Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        android:clickable="false"
+        app:srcCompat="@drawable/dice2"
+        tools:layout_editor_absoluteX="575dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+    <ImageView
+        android:id="@+id/dice4Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/dice4"
+        tools:layout_editor_absoluteX="702dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageView
+        android:id="@+id/dice3Id"
+        android:layout_width="56dp"
+        android:layout_height="52dp"
+        app:srcCompat="@drawable/dice3"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Human"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="638dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/roundId2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="392dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <TextView
+        android:id="@+id/roundId3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Wins"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <TextView
+        android:id="@+id/roundId4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C : 3 / H : 2"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="738dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Target"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="392dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <TextView
+        android:id="@+id/comScoreId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="702dp"
+        tools:layout_editor_absoluteY="63dp" />
+
+    <TextView
+        android:id="@+id/userScoreId"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="766dp"
+        tools:layout_editor_absoluteY="64dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

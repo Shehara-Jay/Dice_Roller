@@ -4,39 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sea"
-    tools:context=".MainActivity"
-    tools:ignore="ExtraText"
-    tools:layout_editor_absoluteY="25dp">
+    android:background="@drawable/rotatebackground"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="213dp"
         android:layout_height="114dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="312dp"
         android:text="Dice Roller"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="#100F0F"
         android:textSize="42sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="48dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="350dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="276dp"
-        android:max="100"
-        android:progress="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:foregroundTint="#FFC107"
+        tools:layout_editor_absoluteX="326dp"
+        tools:layout_editor_absoluteY="263dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
